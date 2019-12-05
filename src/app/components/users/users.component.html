@@ -1,8 +1,22 @@
 <h2>Usuarios</h2>
-<form #searchForm="ngForm" class="form-inline" (ngSubmit)="buscar()">
+<form #searchForm="ngForm" class="form-inline" (ngSubmit)="buscarN()">
     <div class="form-group">
         <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busqueda"
-            [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Nombre / Carrera / Edad">
+            [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Nombre">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+</form>
+<form #searchFormE="ngForm" class="form-inline" (ngSubmit)="buscarE()">
+    <div class="form-group">
+        <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busqueda"
+            [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Edad">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+</form>
+<form #searchFormN="ngForm" class="form-inline" (ngSubmit)="buscarN()">
+    <div class="form-group">
+        <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busqueda"
+            [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Carrera">
     </div>
     <button type="submit" class="btn btn-primary mb-2">Buscar</button>
 </form>
