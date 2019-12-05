@@ -13,7 +13,7 @@
     </div>
     <button type="submit" class="btn btn-primary mb-2">Buscar</button>
 </form>
-<form #searchFormN="ngForm" class="form-inline" (ngSubmit)="buscarN()">
+<form #searchFormN="ngForm" class="form-inline" (ngSubmit)="buscarC()">
     <div class="form-group">
         <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busquedaC"
             [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Carrera">
