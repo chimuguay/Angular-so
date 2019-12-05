@@ -1,0 +1,6 @@
+{
+    " / api " : {
+      " target " : "ec2-100-24-59-152.compute-1.amazonaws.com" ,
+      " seguro " : false
+    }
+  }
