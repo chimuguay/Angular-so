@@ -91,6 +91,8 @@ export class UsersComponent implements OnInit {
   }
 
   busqueda: string;
+  busquedaE: string;
+  busquedaC: string;
   usersAux: User[];
   buscarN() {
     if (this.busqueda == '') {
@@ -108,29 +110,33 @@ export class UsersComponent implements OnInit {
     }    
   }
   buscarC(){
-    if (this.busqueda == '') {
+    if (this.busquedaC == '') {
       this.ngOnInit();
     } else {
-      console.log(this.busqueda);
+      console.log(this.busquedaC);
       let carrerasMin = this.users.filter(users => {
-        return users.carrera.toLowerCase().includes(this.busqueda);
+        return users.carrera.toLowerCase().includes(this.busquedaC);
       })
       let carrerasMay = this.users.filter(users => {
-        return users.carrera.toUpperCase().includes(this.busqueda);
+        return users.carrera.toUpperCase().includes(this.busquedaC);
       })
       this.usersAux = this.users;
       this.users = (carrerasMin).concat(carrerasMay);      
     }    
   }
   buscarE(){
+    if (this.busquedaE == '') {
+      this.ngOnInit();
+    } else {    
     let edadesMin = this.users.filter(users => {
-      return users.edad.toLowerCase().includes(this.busqueda);
+      return users.edad.toLowerCase().includes(this.busquedaE);
     })
     let edadesMay = this.users.filter(users => {
-      return users.edad.toUpperCase().includes(this.busqueda);
+      return users.edad.toUpperCase().includes(this.busquedaE);
     })
 
     this.usersAux = this.users;
     this.users = (edadesMin).concat(edadesMay);
+  }
   }
 }

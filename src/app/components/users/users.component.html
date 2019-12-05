@@ -8,14 +8,14 @@
 </form>
 <form #searchFormE="ngForm" class="form-inline" (ngSubmit)="buscarE()">
     <div class="form-group">
-        <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busqueda"
+        <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busquedaE"
             [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Edad">
     </div>
     <button type="submit" class="btn btn-primary mb-2">Buscar</button>
 </form>
 <form #searchFormN="ngForm" class="form-inline" (ngSubmit)="buscarN()">
     <div class="form-group">
-        <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busqueda"
+        <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busquedaC"
             [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Carrera">
     </div>
     <button type="submit" class="btn btn-primary mb-2">Buscar</button>
