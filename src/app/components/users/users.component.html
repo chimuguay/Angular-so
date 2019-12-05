@@ -12,7 +12,8 @@
             <div class="card">
                 <h5 class="card-title">{{user.nombre}} {{user.apellidos}}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{{user.carrera}}</h6>
-                <p class="card-text">Edad: {{user.edad}} Dirección {{user.direccion}}</p>
+                <p class="card-text">Dirección {{user.direccion}}</p>
+                <p class="card-text">Edad: {{user.edad}} </p>
                 <div class="card-body">
                     <button type="button" class="btn btn-secondary" (click)="editUser(user.id)">Editar</button>
                     <button type="button" class="btn btn-danger" (click)="deleteUser(user.id)">Eliminar</button>
@@ -21,7 +22,9 @@
         </li>
     </ul>
 </div>
-
+<br>
+<br>
+<a routerLink="/home" ><button type="button" class="btn btn-outline-success">Regresar-</button></a>
 <div class="alert alert-danger" role="alert" *ngIf="status == 'error'">
     Rellene todos los campos
 </div>
@@ -67,8 +70,5 @@
         </div>
 
         <input type="submit" value="Editar" class="btn btn-success">
-    </form>
-
+    </form>    
 </div>
-
-<register></register>
