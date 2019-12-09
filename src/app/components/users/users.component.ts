@@ -110,29 +110,29 @@ export class UsersComponent implements OnInit {
     }    
   }
   buscarC(){
-    if (this.busquedaC == '') {
+    if (this.busqueda == '') {
       this.ngOnInit();
     } else {
-      console.log(this.busquedaC);
+      console.log(this.busqueda);
       let carrerasMin = this.users.filter(users => {
-        return users.carrera.toLowerCase().includes(this.busquedaC);
+        return users.carrera.toLowerCase().includes(this.busqueda);
       })
       let carrerasMay = this.users.filter(users => {
-        return users.carrera.toUpperCase().includes(this.busquedaC);
+        return users.carrera.toUpperCase().includes(this.busqueda);
       })
       this.usersAux = this.users;
       this.users = (carrerasMin).concat(carrerasMay);      
     }    
   }
   buscarE(){
-    if (this.busquedaE == '') {
+    if (this.busqueda == '') {
       this.ngOnInit();
     } else {    
     let edadesMin = this.users.filter(users => {
-      return users.edad.toLowerCase().includes(this.busquedaE);
+      return users.edad.toLowerCase().includes(this.busqueda);
     })
     let edadesMay = this.users.filter(users => {
-      return users.edad.toUpperCase().includes(this.busquedaE);
+      return users.edad.toUpperCase().includes(this.busqueda);
     })
 
     this.usersAux = this.users;
