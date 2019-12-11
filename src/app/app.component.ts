@@ -23,6 +23,6 @@ export class AppComponent implements OnInit{
       this.router.navigate(['/login']);
     }else
       this.router.navigate(['/home']);
-     this.router.navigate(['/login']);
+     //this.router.navigate(['/login']);
   }
 }
