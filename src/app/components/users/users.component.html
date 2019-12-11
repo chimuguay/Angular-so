@@ -1,3 +1,4 @@
+<div>
 <h2>Usuarios</h2>
 <form #searchForm="ngForm" class="form-inline" (ngSubmit)="buscarN()">
     <div class="form-group">
@@ -8,20 +9,20 @@
 </form>
 <form #searchFormE="ngForm" class="form-inline" (ngSubmit)="buscarE()">
     <div class="form-group">
-        <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busquedaE"
+        <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busqueda"
             [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Edad">
     </div>
     <button type="submit" class="btn btn-primary mb-2">Buscar</button>
 </form>
 <form #searchFormN="ngForm" class="form-inline" (ngSubmit)="buscarC()">
     <div class="form-group">
-        <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busquedaC"
+        <input type="text" class="form-control" id="inputPassword2" #name="ngModel" [(ngModel)]="busqueda"
             [ngModelOptions]="{standalone: true}" class="form-control" required placeholder="Carrera">
     </div>
     <button type="submit" class="btn btn-primary mb-2">Buscar</button>
 </form>
 <div *ngIf="users">
-    <ul class="list-group">
+    <ul class="list-group-item list-group-item-secondary">
         <li class="list-group-item" *ngFor="let user of users">
             <div class="card">
                 <h5 class="card-title">{{user.nombre}} {{user.apellidos}}</h5>
@@ -29,8 +30,8 @@
                 <p class="card-text">Dirección {{user.direccion}}</p>
                 <p class="card-text">Edad: {{user.edad}} </p>
                 <div class="card-body">
-                    <button type="button" class="btn btn-secondary" (click)="editUser(user.id)">Editar</button>
-                    <button type="button" class="btn btn-danger" (click)="deleteUser(user.id)">Eliminar</button>
+                    <button type="button" class="btn btn-dark" (click)="editUser(user.id)">Editar</button>
+                    <button type="button" class="btn btn-warning" (click)="deleteUser(user.id)">Eliminar</button>
                 </div>
             </div>
         </li>

@@ -91,8 +91,6 @@ export class UsersComponent implements OnInit {
   }
 
   busqueda: string;
-  busquedaE: string;
-  busquedaC: string;
   usersAux: User[];
   buscarN() {
     if (this.busqueda == '') {
